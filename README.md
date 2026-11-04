@@ -4,7 +4,15 @@ An original static research website about pharmaceutical evidence, incentives, a
 
 ## View
 
+**Live website: [BigPharma2 — The Medicine Ledger](https://rickusinggithub.github.io/BigPharma2/)**
+
 Open `dist/index.html` directly, or run `node server.cjs` and visit http://127.0.0.1:4182. There is no build step, dependency installation, account, tracking or application backend. Google Fonts is optional; system fallbacks work offline.
+
+## GitHub Pages
+
+Pages publishes the `main` branch from `/ (root)`. The root `index.html` is generated from `dist/index.html` with asset paths adjusted to `dist/`; `.nojekyll` preserves the static site without Jekyll processing.
+
+After editing the HTML source, run `node build-pages.cjs` and commit the generated root `index.html` with your changes. CSS, JavaScript and data remain in `dist/` and are used directly by the homepage. Run `node check.cjs` to validate the interactions and internal links.
 
 ## Structure
 
